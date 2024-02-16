@@ -4,8 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    flex-direction: column-reverse;
+    gap: 3rem;
     color: white;
+    margin-bottom: 5rem;
 }
 
 .about-img {
@@ -14,7 +16,8 @@
 
 .about-img img {
     position: relative;
-    width: 32vw;
+    width: var(--size-8xl);
+    height: var(--size-8xl);
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     top: 1rem;
@@ -29,7 +32,7 @@
 
 .heading {
     text-align: center;
-    font-size: 8rem;
+    font-size: var(--size-5xl);
 }
 
 .about-content h2 {
@@ -37,7 +40,38 @@
     line-height: 1.5;
 }
 
-.about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+@media (min-width: 767px) {
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5rem
+    }
+    .about-img img {
+        width: var(--size-10xl);
+        height: var(--size-10xl);
+        margin-right: 5rem;
+    }
+    
 }
+
+@media (min-width: 1023px) {
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5rem
+    }
+    .about-img img {
+        width: 15rem;
+        height: 15rem;
+        margin-right: 5rem;
+    }
+    .about-content h2 {
+        font-size: var(--size-6xl);
+    }
+}
+
+
