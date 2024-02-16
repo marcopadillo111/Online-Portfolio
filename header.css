@@ -73,7 +73,7 @@ header {
 }
 
 /* md */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     .container {
         max-width: 768px;
     }
@@ -90,6 +90,10 @@ header {
 
     .navBar {
     display: none;
+    }
+    
+    p {
+        font-size: var(--size-lg);
     }
 }
 
