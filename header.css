@@ -1,0 +1,123 @@
+@import url("main.css");
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    padding: 1rem;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+}
+
+.name-logo {
+    color: white;
+    font-size: var(--size-2xl);
+    white-space: nowrap;
+}
+
+.name-logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.new-color {
+    color: var(--main-color);
+}
+
+
+
+.navMenu {
+    display: none;
+}
+
+.nav-menu__link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu__link:hover,
+.nav-menu__link:active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    transition: color 0.3s;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: var(--size-4xl);
+    height: var(--size-4xl);
+    background: transparent;
+    display: block;
+    padding: 0;
+    border: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.navBar:hover {
+    color: var(--main-color);
+    transition: color 0.3s;
+}
+
+/* md */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    .navMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+    color:white;
+    font-size: var(--size-lg);
+    font-weight: 900;
+    }
+
+    .navBar {
+    display: none;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    .navMenu {
+        font-size: var(--size-2xl);
+    }
+    .logo {
+        width: var(--size-8xl);
+        height: var(--size-3xl);
+    }
+}
+
+/* xl */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+    .navMenu {
+        font-size: var(--size-4xl);
+    }
+    .logo {
+        width: var(--size-10xl);
+        height: var(--size-5xl);
+    }
+    
+}
