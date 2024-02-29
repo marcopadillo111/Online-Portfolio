@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="mobileNav.css">
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="works.css">
+    <link rel="stylesheet" href="contact.css">
 
+<!-- ------------HEADER------------ -->
 
 </head>
-<body>
+<body class="unselectable">
     <header class="container">
         <div class="logo">
             <h3 class="name-logo"> John<span class="new-color"> Marco </span></h3>
@@ -32,6 +35,13 @@
                 </li>
                 <li>
                     <a class="nav-menu__link" href="#contacts"> Contacts </a>
+                </li>
+                <li class="line">
+                </li>
+                <li>
+                    <a class="sun sun-header" id="sun">
+                        <i class='bx bxs-sun'></i>
+                    </a>
                 </li>
             </ul>
             <button class="navBar"> 
@@ -58,8 +68,17 @@
             <li>
                 <a class="mobile-nav__link" href="#contacts"> Contacts </a>
             </li>
+            <li class="mob-line">
+                </li>
+            <li>
+                <a class="sun" id="mob-sun">
+                    <i class='bx bxs-sun'></i>
+                </a>
+            </li>
         </ul>
     </div>
+
+<!-- ---------------HERO-------------- -->
 
     <section class="home container section" id="home">
         <div class="home-img">
@@ -83,20 +102,174 @@
         </div>
     </section>
 
+<!-- --------------ABOUT-------------- -->
 
     <section class="about container section" id="about">
         <div class="about-content">
-            <h2 class="heading"> About <span class="new-color"> Me </span></h2>
+            <h2 class="section-heading"> <span class="new-color"> About </span> Me </h2>
             <p> 
                 My journey in the world of technology began with tinkering with hardware and experimenting with different programming languages. As I delved deeper, I realized that technology isn't just about building software, it's about leveraging innovation to solve real-world problems and make a positive impact on society. Currently pursuing my degree in I.T. at Dalubhasaan ng Lungsod ng Lucena, I'm constantly seeking opportunities to expand my knowledge and skills. Whether it's through coursework or personal projects. I'm always eager to learn and grow.
-
-
             </p>
+            <div class="skills-container">
+                <div class="row">
+                    <div class="col">
+                        <div class="skill">
+                            <div class="content">
+                                <span>80%</span>
+                                <span>HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="skill">
+                            <div class="content">
+                                <span>76%</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="skill">
+                            <div class="content">
+                                <span>70%</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="skill">
+                            <div class="content">
+                                <span>84%</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="skill">
+                            <div class="content">
+                                <span>78%</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="about-img">
             <img src="image.jpg">
         </div>
     </section>
+    
+<!-- --------------WORKS--------------- -->
+    
+    <section class="works container section" id="works">
+        <div class="works-content">
+            <h2 class="section-heading">My <span class="new-color">Works</span> </h2>
+            <div class="works-container">
+                <div class="works-item">
+                    <h3> Basic Calculator </h3>
+                    <div class="bg-image" style="background-image: url('calculator.jpg')" >
+                        <div class="item-btns">
+                            <a href=" https://marcopadillo111.github.io/WorkingCalculator/ "><button> Live Demo </button></a>
+                            <a href=" https://github.com/marcopadillo111/WorkingCalculator "><button> Source Code </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="works-item">
+                    <h3> Landing Page </h3>
+                    <div class="bg-image" style="background-image: url('landingPage.jpg')";>
+                        <div class="item-btns">
+                            <a href=" https://marcopadillo111.github.io/landingPage/ "><button> Live Demo </button></a>
+                            <a href=" https://github.com/marcopadillo111/landingPage "><button> Source Code </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="works-item">
+                    <h3> Movie Guessing Game </h3>
+                    <div class="bg-image" style="background-image: url('guessGame.jpg')" >
+                        <div class="item-btns">
+                            <a href=" https://marcopadillo111.github.io/guessTheMovie/ "><button> Live Demo </button></a>
+                            <a href=" https://github.com/marcopadillo111/guessTheMovie "><button> Source Code </button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="works-item">
+                    <h3> To-Do List </h3>
+                    <div class="bg-image" style="background-image: url('toDoList.jpg')" >
+                        <div class="item-btns">
+                            <a href=" https://marcopadillo111.github.io/ToDo_List/ "><button> Live Demo </button></a>
+                            <a href=" https://github.com/marcopadillo111/ToDo_List "><button> Source Code </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- ----------------CONTACT---------------- -->
+
+    <section class="contact container section" id="contacts">
+        <h2 class="section-heading"> <span class="new-color">Contact</span> Me </h2>
+        <div class="contact-contents">
+            <div class="contact-info">
+                <h3> Contact Information </h3>
+                <div class="info-container">
+                    <div class="infos">
+                        <div class="info-label">
+                            <i class='bx bxs-phone'></i>
+                            <span> Phone </span>
+                        </div>
+                        <span class="selectable"> 09271606279 </span>
+                    </div>
+                    
+                    <div class="contact-line"></div>
+                    
+                    <div class="infos">
+                        <div class="info-label">
+                            <i class='bx bxs-envelope' ></i>
+                            <span> Email </span>
+                        </div>
+                        <span class="selectable"> marcopadillo111@gmail.com </span>
+                    </div>
+                    
+                    <div class="contact-line"></div>
+                    
+                    <div class="social-icons">
+                <a href="https://www.linkedin.com/me?trk=p_mwlite_my_network-secondary_nav"> <i class='bx bxl-linkedin-square'></i> </a>
+                <a href="https://github.com/marcopadillo111"> <i class='bx bxl-github' ></i> </a>
+                <a href="https://m.facebook.com/profile.php/?id=100015820562984&name=xhp_nt__fb__action__open_user"> <i class='bx bxl-facebook-circle' ></i> </a>
+                <a href="https://www.instagram.com/marcopadillo2416/"> <i class='bx bxl-instagram' ></i> </a>
+            </div>
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <h3> Get in Touch </h3>
+                <span id="alert"> Please </span>
+                <form class="contact-form" onsubmit="return validateForm()">
+                <input type="text" placeholder="Name" name="name" id="name" required>
+                <input type="text" placeholder="Email" name="email" id="email" required>
+                <input type="number" placeholder="Phone Number" name="phone" id="phone" required>
+                <textarea placeholder="Your Message..." name="message" id="message" required></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+            </div>
+        </div>
+    </section>
+    
+<!-- -----------FOOTER----------- -->
+    
+    <footer>
+        <span> Copyright © 2024 | All Rights Reserved </span>
+        <span> Developed By <span class="footer-color"> John Marco Padillo </span></span>
+    </footer>
     
 <script src="main.js"> </script>
 </body>
