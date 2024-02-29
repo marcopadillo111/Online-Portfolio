@@ -121,7 +121,7 @@
 
 @media (min-width: 1365px) {
     .item-btns {
-        gap: 2rem;
+        gap: 1rem;
     }
     .item-btns button {
         font-size: 1rem;
