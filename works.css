@@ -1,0 +1,145 @@
+@import url("main.css");
+
+.works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--text-color);
+    width: 100%;
+    margin-top: 10rem;
+    padding-top: 5rem;
+}
+
+.works-content {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.works-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.works-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80dvw;
+    height: 40dvh;
+}
+
+.works-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+}
+
+.item-btns {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 80%;
+    bottom: 100%;
+    background-color: rgba(0, 128, 128, 0.8);;
+    z-index: 99;
+    transition: all 0.3s ease;
+    border-bottom: 5px double var(--main-color);
+    
+}
+
+.item-btns button {
+    display: inline-block;
+    padding: 0.5rem;
+    background: #04fffb;
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 999;
+    
+}
+
+.item-btns button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+@media (min-width: 375px) {
+    .works-item {
+        height: 45dvh;
+    }
+    .works-item h3 {
+        font-size: 1.5rem;
+    }
+} 
+
+@media (min-width: 767px) {
+    .works-item {
+        width: 35dvw;
+        height: 35dvh;
+    }
+    .works {
+        height: 90dvh;
+    }
+    .item-btns {
+        gap: 1rem;
+    }
+    .item-btns button {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 1023px) {
+    
+
+}
+
+@media (min-width: 1365px) {
+    .item-btns {
+        gap: 2rem;
+    }
+    .item-btns button {
+        font-size: 1rem;
+    }
+    .works-item h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1915px) {
+    .works-item {
+        width: 30dvw;
+    }
+    .works-item h3 {
+        font-size: 2.5rem;
+    }
+    .item-btns button {
+        font-size: 1.5rem;
+    }
+
+}
