@@ -8,6 +8,7 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
     line-height: calc(1em + 0.5rem);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 :root {
@@ -35,15 +36,29 @@
 }
 
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--bg-color);
-    color: white;
+    color: var(--text-color);
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-.section {
-    margin-top: 5rem;
+.unselectable * {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
 }
+
+a:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
 
 .btn {
     border: none;
@@ -53,7 +68,7 @@ body {
     letter-spacing: -0.05em;
     margin-top: 1em;
     background-color: var(--clr-rose);
-    color: white;
+    color: var(--text-color);
     padding: 0.5em 1em;
     border-radius: 6px;
     box-shadow: 0 10px 20px rgba(255, 64, 87, 0.5), 0 6px 6px rgba(255, 64, 87, 0.5), 0 0 100px -10px var(--clr-rose);
@@ -64,17 +79,27 @@ body {
     box-shadow: 0 14px 28px rgba(255, 64, 87, 0.25), 0 10px 10px rgba(255, 64, 87, 0.22), 0 0 120px -10px var(--clr-rose);
 }
 
-a::selection {
+::selection {
     background-color: transparent;
     color: inherit;
 }
 
+
+.section-heading {
+    text-align: left;
+    font-size: var(--size-3xl);
+}
+
 p {
-    color: white;
-    font-size: var(--size-sm);
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-left: 1em;
+    color: var(--text-color);
+    font-size: var(--size-xs);
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+svg {
+    margin: 0;
+    padding: 0;
 }
 
 svg:hover {
@@ -84,10 +109,8 @@ svg:hover {
 
 .container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-right: 0.5rem;    
 }
 
 ::-webkit-scrollbar {
@@ -100,87 +123,119 @@ svg:hover {
 
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
-    width: 50px;
+    width: 30px;
 }
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: black;
+    margin-top: 5rem;
+    color: white;
+}
+
+footer span:first-of-type {
+    font-size: 1rem;
+}
+
+footer span:last-of-type {
+    font-size: 0.75rem;
+}
+
+.footer-color {
+    color: #04fffb;
+}
+
+
 
 /* sm */
 @media (min-width: 434px) {
-    .sectionHeader {
-        font-size: var(--size-3xl);
+    .section-heading {
+        font-size: var(--size-4xl);
     }
-    p {
-        font-size: var(--size-sm);
-    }
-    
 } 
 
 /* md */
-@media (min-width: 768px) {
-    .sectionHeader {
-        font-size: var(--size-4xl);
+@media (min-width: 767px) {
+    .container {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    .section-heading {
+        font-size: var(--size-5xl);
     }
     
     p {
         font-size: var(--size-sm);
     }
-    .btn {
-        font-size: var(--size-xl);
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
-    .marginRight {
-        margin-right: 8rem;
+    .footer-color {
+        color: #04fffb;
     }
-    .contacts p {
-    margin-left: 4em;
-    margin-right: 4em;
-}
+    
 } 
 /* lg */    
-@media (min-width: 1024px) {
-    .sectionHeader {
-        font-size: var(--size-5xl);
+@media (min-width: 1023px) {
+    .container {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
     }
-    
-    
-    p {
-        font-size: var(--size-xl);
+    .section-heading {
+        font-size: var(--size-6xl);
     }
-    .section {
-    margin-top: 10rem;
-    }
-    .btn {
-        font-size: var(--size-2xl);
-    }
-    .marginRight {
-        margin-right: 12rem;
-    }
-    .contacts p {
-    margin-left: 1em;
-    margin-right: 1em;
-}
 
 }
    
 
 /* xl */
-@media (min-width: 1439px) {
-    .sectionHeader {
-        font-size: var(--size-6xl);
+@media (min-width: 1365px) {
+    .container {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+    .section-heading {
+        font-size: var(--size-7xl);
     }
     
     p {
-        font-size: var(--size-2xl);
+        font-size: var(--size-lg);
     }
     .section {
-    margin-top: 11rem;
+        height: 100dvh;
     }
-    .btn {
-        font-size: var(--size-4xl);
+    footer span:first-of-type {
+        font-size: 1.25rem;
     }
-    .marginRight {
-        margin-right: 16rem;
+    footer span:last-of-type {
+        font-size: 1rem;
     }
-    .contacts p {
-    margin-left: 1em;
-    margin-right: 1em;
+    footer {
+        padding: 1rem;
+    }
 }
-} 
+
+@media (min-width: 1919px) {
+    .container {
+        padding-left: 12rem !important;
+        padding-right: 12rem !important;
+    }
+    .section-heading {
+        font-size: var(--size-8xl);
+    }
+    p {
+        font-size: var(--size-xl);
+    }
+    footer span:first-of-type {
+        font-size: 1.50rem;
+    }
+    footer span:last-of-type {
+        font-size: 1.25rem;
+    }
+}
