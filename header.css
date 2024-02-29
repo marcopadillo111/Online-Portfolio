@@ -7,12 +7,15 @@ header {
     flex-direction: row;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    position: sticky;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     background-color: black;
     padding: 1rem;
+    
 }
 
 .navContainer {
@@ -29,6 +32,7 @@ header {
 .name-logo:hover {
     transform: scale(1.1);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .new-color {
@@ -41,6 +45,12 @@ header {
     display: none;
 }
 
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav-menu__link {
     text-decoration: none;
     color: white;
@@ -50,7 +60,7 @@ header {
 .nav-menu__link:active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .navBar {
@@ -72,56 +82,91 @@ header {
     transition: color 0.3s;
 }
 
+.line {
+    border: 1px solid white;
+    padding-top: 1.5em;
+}
+
+.sun {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.sun-header {
+    color: white !important;
+}
+
+.sun:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 /* md */
-@media (min-width: 767px) {
-    .container {
-        max-width: 768px;
+@media (min-width: 765px) {
+    header {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
     }
+
     .navMenu {
     display: flex;
     align-items: center;
     list-style: none;
     padding: 0;
-    gap: 2em;
-    color:white;
+    gap: 1.5rem;
+    color: var(--text-color);
     font-size: var(--size-lg);
-    font-weight: 900;
+    font-weight: 700;
     }
 
     .navBar {
     display: none;
     }
-    
-    p {
-        font-size: var(--size-lg);
-    }
 }
 
 /* lg */
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
+@media (min-width: 1020px) {
+    header {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
     }
     .navMenu {
         font-size: var(--size-2xl);
     }
-    .logo {
-        width: var(--size-8xl);
-        height: var(--size-3xl);
+    .name-logo {
+        font-size: var(--size-2xl);
     }
+    
 }
 
 /* xl */
-@media (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-    }
-    .navMenu {
-        font-size: var(--size-4xl);
-    }
-    .logo {
-        width: var(--size-10xl);
-        height: var(--size-5xl);
+@media (min-width: 1360px) {
+    header {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
     }
     
+    
+}
+
+@media (min-width: 1915px) {
+    header {
+        padding-left: 12rem !important;
+        padding-right: 12rem !important;
+    }
+    .navMenu {
+        font-size: var(--size-3xl);
+    }
+    .name-logo {
+        font-size: var(--size-3xl);
+    }
 }
